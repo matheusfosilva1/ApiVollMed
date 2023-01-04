@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class Endereco {
 
     private String logradouro;
-    private Integer numero;
+    private String numero;
     private String complemento;
     private String bairro;
     private String cidade;
@@ -23,7 +23,7 @@ public class Endereco {
 
     public Endereco(EnderecoDTO endereco) {
         this.logradouro = endereco.logradouro();
-        this.numero = Integer.valueOf(endereco.numero());
+        this.numero = endereco.numero();
         this.complemento = endereco.complemento();
         this.bairro = endereco.bairro();
         this.cidade = endereco.cidade();
@@ -31,13 +31,13 @@ public class Endereco {
         this.cep = endereco.cep();
     }
 
-    public void updateEndereco(EnderecoDTO enderecoDTO) {
-        if (enderecoDTO.logradouro() != null) this.logradouro = enderecoDTO.logradouro();
-        if (enderecoDTO.numero() != null) this.numero = Integer.valueOf(enderecoDTO.numero());
-        if (enderecoDTO.complemento() != null) this.complemento = enderecoDTO.complemento();
-        if (enderecoDTO.bairro() != null) this.bairro = enderecoDTO.bairro();
-        if (enderecoDTO.cidade() != null) this.cidade = enderecoDTO.cidade();
-        if (enderecoDTO.uf() != null) this.uf = enderecoDTO.uf();
-        if (enderecoDTO.cep() != null) this.cep = enderecoDTO.cep();
+    public void updateEndereco(Endereco endereco) {
+        if (endereco.logradouro != null) this.logradouro = endereco.logradouro;
+        if (endereco.numero != null) this.numero = endereco.numero;
+        if (endereco.complemento != null) this.complemento = endereco.complemento;
+        if (endereco.bairro != null) this.bairro = endereco.bairro;
+        if (endereco.cidade!= null) this.cidade = endereco.cidade;
+        if (endereco.uf != null) this.uf = endereco.uf;
+        if (endereco.cep != null) this.cep = endereco.cep;
     }
 }

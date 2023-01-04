@@ -43,7 +43,7 @@ public class Medico {
     public void updateInfo(UpdateMedicoDTO doc) {
         if (doc.nome() != null) this.nome = doc.nome();
         if (doc.telefone() != null) this.telefone = doc.telefone();
-        if (doc.enderecoDTO() != null) this.endereco.updateEndereco(doc.enderecoDTO());
+        if (doc.endereco() != null) this.endereco.updateEndereco(doc.endereco());
     }
 
     public void delete() {
