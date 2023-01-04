@@ -1,6 +1,7 @@
 package br.com.sdconecta.api.model;
 
-import br.com.sdconecta.api.dto.DoctorDTO;
+import br.com.sdconecta.api.dto.SaveMedicoDTO;
+import br.com.sdconecta.api.dto.UpdateMedicoDTO;
 import br.com.sdconecta.api.model.components.Especialidade;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -27,13 +28,25 @@ public class Medico {
     private Especialidade especialidade;
     @Embedded
     private Endereco endereco;
+    private boolean ativo;
 
-    public Medico(DoctorDTO doctorDTO) {
-        this.nome = doctorDTO.nome();
-        this.email = doctorDTO.email();
-        this.telefone = doctorDTO.telefone();
-        this.crm =  Integer.valueOf(doctorDTO.crm());
-        this.especialidade = doctorDTO.especialidade();
-        this.endereco = new Endereco(doctorDTO.endereco());
+    public Medico(SaveMedicoDTO saveMedicoDTO) {
+        this.nome = saveMedicoDTO.nome();
+        this.email = saveMedicoDTO.email();
+        this.telefone = saveMedicoDTO.telefone();
+        this.crm =  Integer.valueOf(saveMedicoDTO.crm());
+        this.especialidade = saveMedicoDTO.especialidade();
+        this.endereco = new Endereco(saveMedicoDTO.endereco());
+        this.ativo = true;
+    }
+
+    public void updateInfo(UpdateMedicoDTO doc) {
+        if (doc.nome() != null) this.nome = doc.nome();
+        if (doc.telefone() != null) this.telefone = doc.telefone();
+        if (doc.enderecoDTO() != null) this.endereco.updateEndereco(doc.enderecoDTO());
+    }
+
+    public void delete() {
+        this.ativo = false;
     }
 }

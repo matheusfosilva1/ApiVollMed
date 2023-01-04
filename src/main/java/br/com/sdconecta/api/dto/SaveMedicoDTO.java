@@ -1,17 +1,12 @@
 package br.com.sdconecta.api.dto;
 
-import br.com.sdconecta.api.model.Endereco;
-import br.com.sdconecta.api.model.Medico;
 import br.com.sdconecta.api.model.components.Especialidade;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-public record DoctorDTO(
+public record SaveMedicoDTO(
         @NotBlank String nome,
         @NotBlank String email,
         @NotBlank String telefone,
