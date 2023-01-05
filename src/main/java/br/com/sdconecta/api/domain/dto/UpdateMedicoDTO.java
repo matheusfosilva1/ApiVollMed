@@ -1,6 +1,6 @@
-package br.com.sdconecta.api.dto;
+package br.com.sdconecta.api.domain.dto;
 
-import br.com.sdconecta.api.model.Endereco;
+import br.com.sdconecta.api.domain.model.Endereco;
 import jakarta.validation.constraints.NotNull;
 
 public record UpdateMedicoDTO(

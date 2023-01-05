@@ -1,8 +1,8 @@
-package br.com.sdconecta.api.dto;
+package br.com.sdconecta.api.domain.dto;
 
-import br.com.sdconecta.api.model.Endereco;
-import br.com.sdconecta.api.model.Medico;
-import br.com.sdconecta.api.model.components.Especialidade;
+import br.com.sdconecta.api.domain.model.Endereco;
+import br.com.sdconecta.api.domain.model.Medico;
+import br.com.sdconecta.api.domain.model.components.Especialidade;
 
 public record MedicoDTO(Long id,
                         String nome,

@@ -1,6 +1,6 @@
-package br.com.sdconecta.api.repository;
+package br.com.sdconecta.api.domain.repository;
 
-import br.com.sdconecta.api.model.Medico;
+import br.com.sdconecta.api.domain.model.Medico;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

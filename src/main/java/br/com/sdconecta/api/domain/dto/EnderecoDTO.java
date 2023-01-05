@@ -1,4 +1,4 @@
-package br.com.sdconecta.api.dto;
+package br.com.sdconecta.api.domain.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

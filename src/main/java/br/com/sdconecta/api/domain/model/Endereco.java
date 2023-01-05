@@ -1,8 +1,7 @@
-package br.com.sdconecta.api.model;
+package br.com.sdconecta.api.domain.model;
 
-import br.com.sdconecta.api.dto.EnderecoDTO;
+import br.com.sdconecta.api.domain.dto.EnderecoDTO;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

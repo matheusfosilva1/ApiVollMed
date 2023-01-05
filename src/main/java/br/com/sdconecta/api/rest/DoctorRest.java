@@ -1,11 +1,11 @@
 package br.com.sdconecta.api.rest;
 
-import br.com.sdconecta.api.dto.ListMedicoDTO;
-import br.com.sdconecta.api.dto.MedicoDTO;
-import br.com.sdconecta.api.dto.SaveMedicoDTO;
-import br.com.sdconecta.api.dto.UpdateMedicoDTO;
-import br.com.sdconecta.api.model.Medico;
-import br.com.sdconecta.api.repository.MedicoRepository;
+import br.com.sdconecta.api.domain.dto.ListMedicoDTO;
+import br.com.sdconecta.api.domain.dto.MedicoDTO;
+import br.com.sdconecta.api.domain.dto.SaveMedicoDTO;
+import br.com.sdconecta.api.domain.dto.UpdateMedicoDTO;
+import br.com.sdconecta.api.domain.model.Medico;
+import br.com.sdconecta.api.domain.repository.MedicoRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -15,8 +15,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.net.http.HttpClient;
 
 @RestController
 @RequestMapping("/doctor")

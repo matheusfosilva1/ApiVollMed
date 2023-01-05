@@ -1,8 +1,8 @@
-package br.com.sdconecta.api.model;
+package br.com.sdconecta.api.domain.model;
 
-import br.com.sdconecta.api.dto.SaveMedicoDTO;
-import br.com.sdconecta.api.dto.UpdateMedicoDTO;
-import br.com.sdconecta.api.model.components.Especialidade;
+import br.com.sdconecta.api.domain.dto.UpdateMedicoDTO;
+import br.com.sdconecta.api.domain.model.components.Especialidade;
+import br.com.sdconecta.api.domain.dto.SaveMedicoDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

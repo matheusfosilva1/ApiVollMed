@@ -1,6 +1,6 @@
-package br.com.sdconecta.api.dto;
+package br.com.sdconecta.api.domain.dto;
 
-import br.com.sdconecta.api.model.components.Especialidade;
+import br.com.sdconecta.api.domain.model.components.Especialidade;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
