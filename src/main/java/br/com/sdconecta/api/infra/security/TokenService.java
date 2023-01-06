@@ -30,8 +30,21 @@ public class TokenService {
         }
     }
 
+    public String getSubject(String token){
+        try {
+            var algoritmo = Algorithm.HMAC256(secret);
+            return JWT.require(algoritmo)
+                    .withIssuer("API-Mathleus")
+                    .build()
+                    .verify(token)
+                    .getSubject();
+        } catch (JWTCreationException exception) {
+            throw new RuntimeException("token inválido", exception);
+        }
+    }
+
     private Instant dateExpiration() {
-        return LocalDateTime.now().plusMinutes(30).toInstant(ZoneOffset.of("-03:00"));
+        return LocalDateTime.now().plusHours(3).toInstant(ZoneOffset.of("-03:00"));
     }
 
 }
