@@ -56,7 +56,7 @@ public class DoctorRest {
 
     @GetMapping("/{id}")
     public ResponseEntity getDetails(@PathVariable Long id){
-        var medico = medicoRepository.getReferenceById(id);
+        var medico = medicoRepository.getReferenceByIdAndAtivoTrue(id);
         return ResponseEntity.ok(new MedicoDTO(medico));
     }
 
