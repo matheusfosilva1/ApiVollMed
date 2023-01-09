@@ -48,8 +48,8 @@ public class DoctorRest {
 
     @DeleteMapping("/{id}")
     @Transactional
-    public ResponseEntity delete(@PathVariable Long id) {
-        var medico = medicoRepository.getReferenceById(id);
+    public ResponseEntity delete(@PathVariable Long medicoId) {
+        var medico = medicoRepository.getReferenceById(medicoId);
         medico.delete();
         return ResponseEntity.noContent().build();
     }
